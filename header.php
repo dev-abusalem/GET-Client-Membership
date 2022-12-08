@@ -1,3 +1,13 @@
+<?php
+
+/****
+
+
+
+
+ *** */
+?>
+
 <!DOCTYPE html>
 <html class="wide wow-animation" <?php language_attributes(); ?>>
 
@@ -20,7 +30,14 @@
 <body <?php body_class(); ?>>
     <div class="page">
         <div class="page-loader page-loader-variant-1">
-            <div><a class="brand brand-md brand-inverse" href="index.html"><img src="images/brand-varinat-2.png" width="118" height="34" alt=""></a>
+            <div><a class="brand brand-md brand-inverse" href="index.html">
+                    <?php
+
+                    if (function_exists('the_custom_logo')) {
+                        the_custom_logo();
+                    }
+                    ?>
+                </a>
                 <div class="page-loader-body">
                     <div id="spinningSquaresG">
                         <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
@@ -47,21 +64,42 @@
                                         <li>
                                             <div class="unit flex-row unit-spacing-xs align-items-center">
                                                 <div class="unit-left"><span class="icon icon-xxs icon-cello material-icons-phone"></span></div>
-                                                <div class="unit-body"><a class="link-secondary" href="tel:#">+1 (232) 349–8447</a></div>
+                                                <div class="unit-body"><a class="link-secondary" href="tel:<?php echo esc_html(get_theme_mod('topbar_customize_phone')) ?>"><?php echo esc_html(get_theme_mod('topbar_customize_phone')) ?></a></div>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="unit flex-row unit-spacing-xs align-items-center">
                                                 <div class="unit-left"><span class="icon icon-xxs-small icon-cello fa-envelope-o"></span></div>
-                                                <div class="unit-body"><a class="link-secondary" href="mailto:#">info@demolink.org</a></div>
+                                                <div class="unit-body"><a class="link-secondary" href="mailto:<?php echo esc_html(get_theme_mod('topbar_customize_email')) ?>"><?php echo esc_html(get_theme_mod('topbar_customize_email')) ?></a></div>
                                             </div>
                                         </li>
                                     </ul>
                                     <div class="rd-navbar-aside-group">
                                         <ul class="list-inline list-inline-reset">
-                                            <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-facebook" href="#"></a></li>
-                                            <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-twitter" href="#"></a></li>
-                                            <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-google-plus" href="#"></a></li>
+                                            <?php
+                                            if (get_theme_mod('topbar_customize_fb')) :
+                                            ?>
+                                                <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-facebook" href="<?php echo esc_url(get_theme_mod('topbar_customize_fb')) ?>"></a></li>
+                                            <?php
+                                            endif;
+                                            ?>
+
+                                            <?php
+                                            if (get_theme_mod('topbar_customize_twitter')) :
+                                            ?>
+                                                <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-twitter" href="<?php echo esc_url(get_theme_mod('topbar_customize_twitter')) ?>"></a></li>
+                                            <?php
+                                            endif;
+                                            ?>
+
+
+                                            <?php
+                                            if (get_theme_mod('topbar_customize_insta')) :
+                                            ?>
+                                                <li><a class="icon icon-circle icon-silver-chalice-filled icon-xxs-smallest fa fa-instagram" href="<?php echo esc_url(get_theme_mod('topbar_customize_insta')) ?>"></a></li>
+                                            <?php
+                                            endif;
+                                            ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -98,7 +136,33 @@
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 <div class="rd-navbar-nav-inner">
-                                    <div class="rd-navbar-btn-wrap"><a class="btn btn-smaller btn-cello-outline" href="appointment.html">Appointment</a></div>
+                                    <div class="rd-navbar-btn-wrap"><a class="btn btn-smaller btn-cello-outline" href="<?php echo esc_url(get_theme_mod('topbar_customize_appion_btn')) ?>">Appointment</a></div>
+
+                                    <?php
+                                    wp_nav_menu(array(
+                                        'menu'                 => 'Main Menu',
+                                        'container'            => '',
+                                        'container_class'      => '',
+                                        'container_id'         => '',
+                                        'container_aria_label' => '',
+                                        'menu_class'           => 'rd-navbar-nav',
+                                        'menu_id'              => '',
+                                        'echo'                 => true,
+                                        'fallback_cb'          => false,
+                                        'before'               => '',
+                                        'after'                => '',
+                                        'link_before'          => '',
+                                        'link_after'           => '',
+                                        'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                        'item_spacing'         => 'preserve',
+                                        'depth'                => 0,
+                                        'walker'               => '',
+                                        'theme_location'       => 'main-menu',
+                                    ));
+
+                                    ?>
+
+
                                     <!-- <ul class="rd-navbar-nav">
                                         <li class="active"><a href="index.html">Home</a>
                                         </li>
@@ -194,15 +258,7 @@
                                         <li><a href="contacts-us.html">Contacts</a>
                                         </li>
                                     </ul> -->
-                                    <ul class="rd-navbar-nav">
-                                        <?php
-                                        wp_nav_menu(array(
-                                            'menu'           => 'Main Menu',
-                                            'theme_location' => 'main-menu',
-                                            'fallback_cb'    => false
-                                        ));
-                                        ?>
-                                    </ul>
+
 
                                 </div>
                             </div>

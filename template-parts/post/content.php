@@ -1,0 +1,3 @@
+<?php
+
+// Post template part

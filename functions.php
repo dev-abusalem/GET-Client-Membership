@@ -1,28 +1,6 @@
 <?php
 
-// Add Theme Support
-add_theme_support('title-tag');
-add_theme_support('menus');
-add_theme_support('widgets');
-add_theme_support('custom-background');
-add_theme_support('custom-header');
-add_theme_support('post-thumbnails');
-// add_theme_support('custom-logo');
 
-// Add Custom Logo And Title
-function abs_custom_logo_setup()
-{
-    $defaults = array(
-        'height'               => 120,
-        'width'                => 200,
-        'flex-height'          => true,
-        'flex-width'           => true,
-        'header-text'          => array('site-title', 'site-description'),
-        'unlink-homepage-logo' => true,
-    );
-    add_theme_support('custom-logo', $defaults);
-}
-add_action('after_setup_theme', 'abs_custom_logo_setup');
 
 // Add Menu Location
 function add_nav_menus()
@@ -30,10 +8,29 @@ function add_nav_menus()
     register_nav_menus(array(
         'main menu'             => 'Main Menu',
         'tobbar menu'           => 'Topbar Menu',
-        'footer menu'           => 'Footer Menu'
+        'footer menu'           => 'Footer Menu',
+        'quick links menu'           => 'Quick Links Menu'
     ));
 }
 add_action('init', 'add_nav_menus');
+
+
+// Add Extra Class In Wordpress Submenu
+
+function getclientmem_custom_dropdown_class($classes)
+{
+    $classes[] = 'rd-navbar-dropdown';
+
+    return $classes;
+}
+
+add_filter('nav_menu_submenu_css_class', 'getclientmem_custom_dropdown_class');
+
+
+
+
+
+
 
 
 // Add All CSS Files
@@ -57,3 +54,14 @@ function abs_add_all_js()
 }
 
 add_action('wp_enqueue_scripts', 'abs_add_all_js');
+
+
+
+
+
+
+// Links Extranal PHP Files From Includes
+
+include get_template_directory() . "./includes/customizer-control.php";
+include get_template_directory() . "./includes/all-them-support.php";
+include get_template_directory() . "./includes/widget.php";

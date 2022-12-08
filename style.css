@@ -4,10 +4,33 @@ Theme Name: GET Client Membership
 Description: GET Client Membership WordPress Custom Theme Developed By Engr. Abu Salem
 Author: Engr. Md Abu Salem
 Author URI: https://www.linkedin.com/in/salemwpxpert/
-Text Domain: abstheme;
+Text Domain: getclimem;
 Version: 1.0.0
 Tags: GET Client Membership,Membership, Membership Theme, My Theme, Ssalem Theme, Pro Theme,
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 
 */
+.page {
+    overflow-y: visible !important;
+}
+
+.rd-navbar-nav>ul>.menu-item-has-children {
+    position: relative;
+}
+
+.rd-navbar-static .rd-navbar-nav>li>.rd-navbar-dropdown,
+.rd-navbar-fullwidth .rd-navbar-nav>li>.rd-navbar-dropdown {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    display: block;
+    margin-top: 41px !important;
+    text-align: left;
+    background: #fff;
+}
+
+.rd-navbar-static .rd-navbar-dropdown {
+    box-shadow: 0 0 13px 0 rgb(0 0 0 / 13%);
+    border-top: 5px solid #5ad3f1;
+}

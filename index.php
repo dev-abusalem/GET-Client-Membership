@@ -1,5 +1,19 @@
 <?php get_header(); ?>
 
+<?php
+
+// if (have_posts()) :
+//   while (have_posts()) :
+
+//     the_post();
+//   // get_template_part('template-parts/post/content');
+
+//   endwhile;
+
+// endif;
+
+?>
+
 <section>
   <div class="swiper-container swiper-slider swiper-variant-1" data-loop="false" data-autoplay="false" data-simulate-touch="true">
     <div class="swiper-wrapper">
@@ -751,104 +765,5 @@
     </div>
   </div>
 </section>
-<section class="section-40 section-md-75 bg-cello footer-section">
-  <div class="container">
-    <div class="row justify-content-sm-center">
-      <div class="col-sm-9 col-md-11 col-xl-12">
-        <div class="row row-50">
-          <div class="col-md-6 col-lg-10 col-xl-3">
-            <div class="inset-xl-right-20" style="max-width: 510px;"><a class="brand brand-inverse" href="index.html"><img src="<?php echo get_template_directory_uri() ?>/images/brand-footer.png" width="118" height="34" alt=""></a>
-              <p class="text-spacing--30 text-kashmir-blue">Shelter has been a trusted name in insurance for more than 15 years. Today, we proudly serve more than 16 million customers nationwide.</p><a class="link link-group link-group-animated link-black link-white" href="#"><span>Free Consultation</span><span class="icon icon-xxs icon-primary fa fa-angle-right"></span></a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <h6 class="h6 footer-title">Recent Posts</h6>
-            <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
-                <div class="unit unit-horizontal unit-spacing-lg">
-                  <div class="unit-left">
-                    <figure class="post-image"><img src="<?php echo get_template_directory_uri() ?>/images/post-preview-7-70x70.jpg" alt="" width="70" height="70" />
-                    </figure>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-header">
-                      <p class="inset-lg-right-10">A Look into Nonprofit Risk Management</p>
-                    </div>
-                    <div class="post-meta">
-                      <ul class="list-meta">
-                        <li>
-                          <time datetime="2018-02-04">June 23, 2018 </time>
-                        </li>
-                        <li>1 Comment</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </a></article>
-            <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
-                <div class="unit unit-horizontal unit-spacing-lg">
-                  <div class="unit-left">
-                    <figure class="post-image"><img src="<?php echo get_template_directory_uri() ?>/images/post-preview-8-70x70.jpg" alt="" width="70" height="70" />
-                    </figure>
-                  </div>
-                  <div class="unit-body">
-                    <div class="post-header">
-                      <p class="inset-lg-right-10">Workers’ Compensation: Combinability of Insureds</p>
-                    </div>
-                    <div class="post-meta">
-                      <ul class="list-meta">
-                        <li>
-                          <time datetime="2018-02-04">June 20, 2018</time>
-                        </li>
-                        <li>1 Comment</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </a></article>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <h6 class="h6 footer-title">Quick links</h6>
-            <div class="row" style="max-width: 270px;">
-              <div class="col-6">
-                <ul class="list-marked-variant-2">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="gallery-item.html">Cases</a></li>
-                  <li><a href="classic-blog.html">Blog</a></li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <ul class="list-marked-variant-2">
-                  <li><a href="about-us.html">About us</a></li>
-                  <li><a href="contacts-us.html">Contacts</a></li>
-                  <li><a href="appointment.html">Appointment</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 col-xl-3">
-            <h6 class="h6 footer-title">Contact us</h6>
-            <address class="contact-info text-left">
-              <div class="unit unit-horizontal unit-spacing-xs align-items-center">
-                <div class="unit-left"><span class="icon icon-xs icon-primary material-icons-phone"></span></div>
-                <div class="unit-body"><a class="link-white" href="tel:#">+1 (409) 987–5874</a></div>
-              </div>
-              <div class="unit unit-horizontal unit-spacing-xs align-items-center">
-                <div class="unit-left"><span class="icon icon-xs icon-primary fa fa-envelope-o"></span></div>
-                <div class="unit-body"><a class="link-white" href="mailto:#">info@demolink.org</a></div>
-              </div>
-              <div class="unit unit-horizontal unit-spacing-xs">
-                <div class="unit-left"><span class="icon icon-xs icon-primary material-icons-place"></span></div>
-                <div class="unit-body"><a class="link-white d-inline" href="#">6036 Richmond hwy,<br>Alexandria, VA USA 22303</a></div>
-              </div>
-            </address>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 <?php get_footer(); ?>
