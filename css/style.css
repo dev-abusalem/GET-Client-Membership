@@ -20,7 +20,8 @@
 	--white: #fff;
 	--gray: #868e96;
 	--gray-dark: #343a40;
-	--primary: #007bff;
+	/* --primary: #007bff; */
+	--primary: #009865;
 	--secondary: #868e96;
 	--success: #28a745;
 	--info: #17a2b8;
@@ -10456,7 +10457,7 @@ a {
 a,
 a:active,
 a:focus {
-	color: #5ad3f1;
+	color: #009865;
 }
 
 a:hover,
@@ -11707,8 +11708,8 @@ html .btn-default:focus {
 .open>html .btn-default.dropdown-toggle,
 html .btn-default:hover {
 	color: #fff;
-	background-color: #5ad3f1;
-	border-color: #5ad3f1;
+	background-color: #009865;
+	border-color: #009865;
 }
 
 html .btn-default.disabled,
@@ -43939,7 +43940,7 @@ html.rd-navbar-sidebar-linked body {
 }
 
 .rd-navbar-corporate-light.rd-navbar-static .rd-navbar-nav {
-	margin-right: 40px;
+	margin-right: 0px;
 }
 
 .rd-navbar-corporate-light.rd-navbar-static .rd-navbar-nav>li>a {

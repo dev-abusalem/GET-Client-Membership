@@ -65,3 +65,4 @@ add_action('wp_enqueue_scripts', 'abs_add_all_js');
 include get_template_directory() . "./includes/customizer-control.php";
 include get_template_directory() . "./includes/all-them-support.php";
 include get_template_directory() . "./includes/widget.php";
+include get_template_directory() . "./includes/custom-all-post-type.php";

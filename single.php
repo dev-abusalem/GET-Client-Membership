@@ -80,7 +80,10 @@ get_header()
                     </div>
                 </article>
                 <div class="divider-fullwidth bg-gray-lighter"></div>
-                <div class="post-comment-block">
+
+
+
+                <!-- <div class="post-comment-block">
                     <h4>3 Comments</h4>
                     <div class="comment-list inset-md-right-60 inset-lg-right-30 inset-xl-right-100 offset-top-30">
                         <div class="comment-group">
@@ -189,7 +192,11 @@ get_header()
                             <button class="btn btn-primary" type="submit" style="min-width: 200px;">Submit</button>
                         </form>
                     </div>
-                </div>
+                </div> -->
+
+                <?php comments_template('/template-parts/template-parts'); ?>
+
+
             </div>
 
 

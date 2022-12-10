@@ -1,4 +1,9 @@
-<?php  ?>
+<?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+
+?>
 
 
 
@@ -6,15 +11,26 @@
     <div class="inset-lg-left-15 inset-lg-right-10">
         <div class="row">
             <div class="col-md-6 col-lg-12">
-                <form class="rd-search rd-search-classic" action="search-results.html" method="GET">
+                <form class="rd-search rd-search-classic" action="<?php echo home_url('/') ?>" method="get">
                     <div class="form-wrap">
-                        <label class="form-label" for="rd-search-form-input-1">Search...</label>
-                        <input class="form-input" id="rd-search-form-input-1" type="text" name="s" autocomplete="off">
+                        <!-- <label class="form-label" for="rd-search-form-input-1">Search...</label> -->
+                        <input placeholder="Search...." class="form-input" value="<?php
+                                                                                    echo get_search_query()
+                                                                                    ?>" id="rd-search-form-input-1" type="search" name="s">
                     </div>
                     <button class="rd-search-submit" type="submit"></button>
                 </form>
                 <div class="offset-top-50">
                     <h6 class="text-uppercase">Categories</h6>
+
+                    <?php
+
+                    if (is_active_sidebar('sidebar-cat')) {
+                        dynamic_sidebar('sidebar-cat');
+                    }
+
+                    ?>
+
                     <ul class="list-marked-bordered offset-top-15">
                         <li><a href="#"><span>Travel Insurance</span><span class="text-dusty-gray">(2)</span></a></li>
                         <li><a href="#"><span>Wedding Insurance</span><span class="text-dusty-gray">(2)</span></a></li>

@@ -136,7 +136,16 @@
                             </div>
                             <div class="rd-navbar-nav-wrap">
                                 <div class="rd-navbar-nav-inner">
-                                    <div class="rd-navbar-btn-wrap"><a class="btn btn-smaller btn-cello-outline" href="<?php echo esc_url(get_theme_mod('topbar_customize_appion_btn')) ?>">Appointment</a></div>
+
+                                    <?php
+                                    if (get_theme_mod('topbar_customize_appion_btn')) :
+                                    ?>
+                                        <div class="rd-navbar-btn-wrap"><a class="btn btn-smaller btn-cello-outline" href="<?php echo esc_url(get_theme_mod('topbar_customize_appion_btn')) ?>">Appointment</a></div>
+                                    <?php
+                                    endif;
+                                    ?>
+
+
 
                                     <?php
                                     wp_nav_menu(array(
@@ -161,105 +170,6 @@
                                     ));
 
                                     ?>
-
-
-                                    <!-- <ul class="rd-navbar-nav">
-                                        <li class="active"><a href="index.html">Home</a>
-                                        </li>
-                                        <li><a href="about-us.html">About Us</a>
-                                        </li>
-                                        <li><a href="services.html">Services</a>
-                                        </li>
-                                        <li><a href="#">Cases</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="grid-gallery.html">Grid gallery</a>
-                                                </li>
-                                                <li><a href="masonry-gallery.html">Masonry gallery</a>
-                                                </li>
-                                                <li><a href="cobbles-gallery.html">Cobbles gallery</a>
-                                                </li>
-                                                <li><a href="gallery-item.html">Gallery item</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Blog</a>
-                                            <ul class="rd-navbar-dropdown">
-                                                <li><a href="classic-blog.html">Classic blog</a>
-                                                </li>
-                                                <li><a href="grid-blog.html">Grid blog</a>
-                                                </li>
-                                                <li><a href="blog-line.html">Blog Line</a>
-                                                </li>
-                                                <li><a href="masonry-blog.html">Masonry Blog</a>
-                                                </li>
-                                                <li><a href="blog-post.html">Blog post</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Pages</a>
-                                            <ul class="rd-navbar-megamenu">
-                                                <li>
-                                                    <h5 class="rd-megamenu-header">Cases</h5>
-                                                    <ul class="rd-navbar-list">
-                                                        <li><a href="grid-gallery.html">Grid gallery</a></li>
-                                                        <li><a href="masonry-gallery.html">Masonry gallery</a></li>
-                                                        <li><a href="cobbles-gallery.html">Cobbles gallery</a></li>
-                                                        <li><a href="gallery-item.html">Gallery item</a></li>
-                                                    </ul>
-                                                    <h5 class="rd-megamenu-header">Pages</h5>
-                                                    <ul class="rd-navbar-list">
-                                                        <li><a href="about-us.html">About us</a></li>
-                                                        <li><a href="services.html">Services</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <h5 class="rd-megamenu-header">Pages</h5>
-                                                    <ul class="rd-navbar-list">
-                                                        <li><a href="appointment.html">Make an Appointment</a></li>
-                                                        <li><a href="clients.html">Clients</a></li>
-                                                        <li><a href="client-testimonials.html">Client testimonials</a></li>
-                                                        <li><a href="our-team.html">Our team</a></li>
-                                                        <li><a href="team-member-profile.html">Team member profile</a></li>
-                                                        <li><a href="careers.html">Careers</a></li>
-                                                        <li><a href="pricing.html">Pricing</a></li>
-                                                        <li><a href="faq.html">FAQ</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <h5 class="rd-megamenu-header">Extras</h5>
-                                                    <ul class="rd-navbar-list">
-                                                        <li><a href="page-404.html">404</a></li>
-                                                        <li><a href="page-503.html">503</a></li>
-                                                        <li><a href="maintenance.html">Maintenance</a></li>
-                                                        <li><a href="coming-soon.html">Coming soon</a></li>
-                                                        <li><a href="login.html">Login</a></li>
-                                                        <li><a href="register.html">Register</a></li>
-                                                        <li><a href="search-results.html">Search results</a></li>
-                                                        <li><a href="privacy.html">Terms of use</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <h5 class="rd-megamenu-header">Components</h5>
-                                                    <ul class="rd-navbar-list">
-                                                        <li><a href="accordion.html">Accordion</a></li>
-                                                        <li><a href="buttons.html">Buttons</a></li>
-                                                        <li><a href="grid.html">Grid</a></li>
-                                                        <li><a href="forms.html">Forms</a></li>
-                                                        <li><a href="icons.html">Icons</a></li>
-                                                        <li><a href="icon-lists.html">Icon lists</a></li>
-                                                        <li><a href="progress-bars.html">Progress bars</a></li>
-                                                        <li><a href="tabs.html">Tabs</a></li>
-                                                        <li><a href="table-styles.html">Table styles</a></li>
-                                                        <li><a href="typography.html">Typography</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contacts-us.html">Contacts</a>
-                                        </li>
-                                    </ul> -->
-
-
                                 </div>
                             </div>
                         </div>

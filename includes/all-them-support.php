@@ -7,7 +7,16 @@ add_theme_support('widgets');
 add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
-add_theme_support('html5', array('comment-form', 'comment-list', 'search-form', 'galary'));
+add_theme_support('html5', array(
+    'search-form',
+    'comment-form',
+    'comment-list',
+    'gallery',
+    'caption',
+    'script',
+    'style',
+));
+add_theme_support('woocommerce');
 // add_theme_support('custom-logo');
 
 // Add Custom Logo And Title
