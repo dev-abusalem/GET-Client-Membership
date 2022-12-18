@@ -1,4 +1,17 @@
 <?php
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
+
+define('GET_CLIENT_MEMBERSHIP', '1.0.0');
+
+
+
+
+
+
+
+
 
 
 
@@ -9,7 +22,9 @@ function add_nav_menus()
         'main menu'             => 'Main Menu',
         'tobbar menu'           => 'Topbar Menu',
         'footer menu'           => 'Footer Menu',
-        'quick links menu'           => 'Quick Links Menu'
+        'quick links menu'           => 'Quick Links Menu',
+        'services menu'           => 'Services Menu',
+        'home about menu'           => 'Home About Menu',
     ));
 }
 add_action('init', 'add_nav_menus');
@@ -66,3 +81,9 @@ include get_template_directory() . "./includes/customizer-control.php";
 include get_template_directory() . "./includes/all-them-support.php";
 include get_template_directory() . "./includes/widget.php";
 include get_template_directory() . "./includes/custom-all-post-type.php";
+
+
+
+// Links Extranal PHP Files From All Metaboxes
+
+include get_template_directory()  . '/includes/meta-boxes/testimonial-meta.php';

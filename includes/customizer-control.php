@@ -1,6 +1,8 @@
 <?php
 
-
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly.
+}
 
 // Register Customizer For Create Option Header
 
@@ -110,49 +112,68 @@ add_action('customize_register', 'getclientmem_customize_register_for_header_cus
 
 
 
-
-
-
-
-
-function getclientmem_customize_register_for_footer_customize($wp_customize)
+function getclientmem_home_about_section_customize($wp_customize)
 {
 
-    $wp_customize->add_section('getclientmem_footer_customize', array(
-        'title'      => __('Footer Logo', 'getclimem'),
-        'priority'   => 30,
+    $wp_customize->add_section('getclientmem_home_about_sec', array(
+        'title'      => __('Home About Section', 'getclientmem'),
+        'priority'   => 60,
     ));
 
-    $wp_customize->add_setting('footer_customize_logo', array(
-        'capability'        => 'edit_theme_options',
-        'default'           => '',
-        'sanitize_callback' => 'ic_sanitize_image',
-    ));
-    $wp_customize->add_control(new WP_Customize_Image_Control(
-        $wp_customize,
-        'footer_customize_logo',
-        array(
-            'label'    => __('Footer Logo', 'getclimem-domain'),
-            'section'  => 'getclientmem_footer_customize',
-        )
+    // Add Title Texts
+
+    $wp_customize->add_setting('home_about_title_section_update', array(
+        'default'   => 'About Us',
+        'transport' => 'refresh',
     ));
 
-    // // Copy Right Text
+    $wp_customize->add_control('home_about_title_section_update', array(
+        'label'      => __('Title', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'text',
+    ));
 
 
-    // $wp_customize->add_setting('footer_customize_copy_right_text', array(
 
-    //     'default'           => '2022 © Get Client Membership',
-    //     'sanitize_callback' => 'ic_sanitize_image',
-    // ));
-    // $wp_customize->add_control(
-    //     'footer_customize_copy_right_text',
-    //     array(
-    //         'label'     => __('Copyright Text', 'getclimem-domain'),
-    //         'section'   => 'getclientmem_footer_customize',
-    //         'type'      => 'text'
+    // Add Descriptions Texts
 
-    // ));
+    $wp_customize->add_setting('home_about_description_section_update', array(
+        'default'   => 'The professionals at Shelter Insurance Company are experts in their fields and will help you design solutions that fit your needs. We look forward to working with you!',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('home_about_description_section_update', array(
+        'label'      => __('Sort Description', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'textarea',
+    ));
+
+
+    // Add Button Text
+
+    $wp_customize->add_setting('home_about_button_section_update', array(
+        'default'   => 'Get a Quote',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('home_about_button_section_update', array(
+        'label'      => __('Button Text', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'text',
+    ));
+
+    // Add Button URL
+
+    $wp_customize->add_setting('home_about_button_URL_update', array(
+        'default'   => 'https://google.com',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('home_about_button_URL_update', array(
+        'label'      => __('Button URL', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'url',
+    ));
 }
 
-add_action('customize_register', 'getclientmem_customize_register_for_footer_customize');
+add_action('customize_register', 'getclientmem_home_about_section_customize');

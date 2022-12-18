@@ -44,7 +44,13 @@ get_header()
                             <li>
                                 <dl class="list-terms-inline">
                                     <dt>Posted by</dt>
-                                    <dd><?php the_author() ?></dd>
+                                    <span><?php
+                                            $author_id = get_the_author_meta('ID');
+
+                                            echo get_the_author_meta('nicename', $author_id);
+
+
+                                            ?></span>
                                 </dl>
                             </li>
                             <li>
@@ -72,10 +78,11 @@ get_header()
                     <div class="post-footer">
                         <h5>Share this post:</h5>
                         <ul class="list-inline list-inline-xs">
-                            <li><a class="icon icon-xxs-small link-tundora fa-facebook" href="#"></a></li>
-                            <li><a class="icon icon-xxs-small link-tundora fa-twitter" href="#"></a></li>
-                            <li><a class="icon icon-xxs-small link-tundora fa-google-plus" href="#"></a></li>
-                            <li><a class="icon icon-xxs-small link-tundora fa-pinterest-p" href="#"></a></li>
+                            <li><a class="icon icon-xxs-small link-tundora fa-facebook" href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"></a></li>
+                            <li><a class="icon icon-xxs-small link-tundora fa-twitter" href="http://www.twitter.com/sharer/sharer.php?u=<?php the_permalink(); ?>"></a></li>
+                            <li><a class="icon icon-xxs-small link-tundora fa-instagram" href="http://www.instagram.com/sharer/sharer.php?u=<?php the_permalink(); ?>"></a></li>
+                            <li><a class="icon icon-xxs-small link-tundora fa-pinterest-p" href="http://www.pinterest.com/sharer/sharer.php?u=<?php the_permalink(); ?>"></a></li>
+
                         </ul>
                     </div>
                 </article>
@@ -83,118 +90,7 @@ get_header()
 
 
 
-                <!-- <div class="post-comment-block">
-                    <h4>3 Comments</h4>
-                    <div class="comment-list inset-md-right-60 inset-lg-right-30 inset-xl-right-100 offset-top-30">
-                        <div class="comment-group">
-                            <article class="comment">
-                                <div class="unit unit-spacing-md unit-xs-horizontal">
-                                    <div class="unit-left">
-                                        <figure><img src="images/post-2-70x71.jpg" alt="" width="70" height="71" />
-                                        </figure>
-                                    </div>
-                                    <div class="unit-body">
-                                        <div class="comment-body">
-                                            <div class="comment-body-header">
-                                                <div class="comment-meta">
-                                                    <p class="user">Jill Peterson</p>
-                                                    <ul class="list-inline list-icon-meta">
-                                                        <li><a class="link-group link-group-baseline" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
-                                                        <li><a class="link-group" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="comment-time">
-                                                    <div class="object-inline">
-                                                        <time datetime="2018-02-16">Feb 16, 7:42 PM</time><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="comment-body-text">
-                                                <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <div class="comment-group-reply">
-                                <article class="comment">
-                                    <div class="unit unit-spacing-md unit-xs-horizontal">
-                                        <div class="unit-left">
-                                            <figure><img src="images/post-3-70x71.jpg" alt="" width="70" height="71" />
-                                            </figure>
-                                        </div>
-                                        <div class="unit-body">
-                                            <div class="comment-body">
-                                                <div class="comment-body-header">
-                                                    <div class="comment-meta">
-                                                        <p class="user">John doe</p>
-                                                        <ul class="list-inline list-icon-meta">
-                                                            <li><a class="link-group link-group-baseline" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
-                                                            <li><a class="link-group" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="comment-time">
-                                                        <div class="object-inline">
-                                                            <time datetime="2018-02-16">Feb 16, 7:42 PM</time><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="comment-body-text">
-                                                    <p class="text-black">Beatae voluptatum nihil, praesentium, fugiat tempore accusamus distinctio explicabo numquam molestias sit est assumenda laudantium dignissimos ullam labore quae repudiandae sint, omnis, voluptatem deserunt alias temporibus. Neque, exercitationem minus enim!</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="comment-group">
-                            <article class="comment">
-                                <div class="unit unit-spacing-md unit-xs-horizontal">
-                                    <div class="unit-left">
-                                        <figure><img src="images/post-4-70x71.jpg" alt="" width="70" height="71" />
-                                        </figure>
-                                    </div>
-                                    <div class="unit-body">
-                                        <div class="comment-body">
-                                            <div class="comment-body-header">
-                                                <div class="comment-meta">
-                                                    <p class="user">Kate Smith</p>
-                                                    <ul class="list-inline list-icon-meta">
-                                                        <li><a class="link-group link-group-baseline" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-thumb-up-outline"></span><span>Like</span></a></li>
-                                                        <li><a class="link-group" href="#"><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-comment-outline"></span><span>Reply</span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="comment-time">
-                                                    <div class="object-inline">
-                                                        <time datetime="2018-02-16">Feb 16, 7:42 PM</time><span class="icon icon-xxs-smaller icon-dusty-gray mdi mdi-clock"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="comment-body-text">
-                                                <p class="text-black">Sequi qui itaque est eligendi ea, error deserunt sed! Itaque ipsum, in beatae unde ullam iste aut. Beatae distinctio sed voluptatum reiciendis nam facere maxime sunt voluptatibus, saepe ad alias.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-comment-form offset-top-40 offset-sm-top-60">
-                    <h4>Leave a comment</h4>
-                    <div class="inset-md-right-60 inset-lg-right-30 inset-xl-right-100 offset-top-15">
-                        <form class="rd-mailform form-classic form-classic-bordered label-outside">
-                            <div class="form-wrap">
-                                <label class="form-label-outside text-black" for="comment-message">Message:</label>
-                                <textarea class="form-input" id="comment-message" name="message" data-constraints="@Required"></textarea>
-                            </div>
-                            <button class="btn btn-primary" type="submit" style="min-width: 200px;">Submit</button>
-                        </form>
-                    </div>
-                </div> -->
-
-                <?php comments_template('/template-parts/template-parts'); ?>
+                <?php comments_template('/template-parts/comments.php'); ?>
 
 
             </div>

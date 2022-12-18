@@ -38,3 +38,102 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 .col-1 {
     width: 48% !important;
 }
+
+/* Comments Form Custom CSS */
+#comments form textarea#comment {
+    width: 100% !important;
+    border-radius: 0.4rem;
+    padding: 10px 20px !important;
+    border: 1px solid #009865 !important;
+    font-size: 16px !important;
+}
+
+#comments form .comment-form-author {
+    width: 45% !important;
+    float: left !important;
+    margin-bottom: 20px;
+}
+
+#comments form .comment-form-email {
+    width: 45% !important;
+    float: right !important;
+    text-align: right;
+    margin-bottom: 20px;
+
+}
+
+#comments form p label {
+    color: black !important;
+}
+
+#comments form .comment-form-email input,
+#comments form .comment-form-author input {
+    width: 100% !important;
+    padding: 10px 20px !important;
+    border-radius: 3px !important;
+    border: 1px solid #009865 !important;
+    font-size: 16px !important;
+}
+
+#comments form .comment-form-url {
+    width: 100% !important;
+    clear: both;
+}
+
+#comments form .comment-form-url input {
+    width: 100% !important;
+    padding: 10px 20px !important;
+    border-radius: 3px !important;
+    border: 1px solid #009865 !important;
+    font-size: 16px !important;
+}
+
+#comments form .form-submit {
+    width: 45% !important;
+}
+
+#comments form .form-submit #submit {
+    width: 100% !important;
+    padding: 12px !important;
+    background: #009865 !important;
+    border: none !important;
+    color: #fff !important;
+    font-size: 17px !important;
+    letter-spacing: 1.2px !important;
+    cursor: pointer;
+}
+
+
+/**************************************/
+.search {
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+    display: flex;
+    align-items: center;
+
+}
+
+.search input {
+
+    text-indent: 25px;
+    border: 2px solid #d6d4d4;
+
+
+}
+
+
+.search input:focus {
+
+    box-shadow: none;
+    border: 2px solid #009865;
+
+
+}
+
+.search button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #009865;
+}
+
+/**************************************/

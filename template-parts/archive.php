@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 ?>
 <main id="content" class="site-main" role="main">
 
-    <?php if (apply_filters('hello_elementor_page_title', true)) : ?>
+    <?php if (apply_filters('GET_CLIENT_MEMBERSHIP', true)) : ?>
         <header class="page-header">
             <?php
             the_archive_title('<h1 class="entry-title">', '</h1>');

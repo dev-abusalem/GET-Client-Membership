@@ -1,20 +1,13 @@
 <?php
-
-/**
- * The template for displaying search results.
- *
- * @package HelloElementor
- */
-
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
 <main id="content" class="site-main" role="main">
-    <?php if (apply_filters('hello_elementor_page_title', true)) : ?>
+    <?php if (apply_filters('GET_CLIENT_MEMBERSHIP', true)) : ?>
         <header class="page-header">
             <h1 class="entry-title">
-                <?php esc_html_e('Search results for: ', 'hello-elementor'); ?>
+                <?php esc_html_e('Search results for: %s', 'hello-elementor'); ?>
                 <span><?php echo get_search_query(); ?></span>
             </h1>
         </header>
