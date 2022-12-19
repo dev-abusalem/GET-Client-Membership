@@ -4,7 +4,7 @@
             <div class="col-sm-9 col-md-11 col-xl-12">
                 <div class="row row-50">
                     <div class="col-md-6 col-lg-10 col-xl-3">
-
+                        <h6 class="h6 footer-title">About us</h6>
                         <?php
                         if (is_active_sidebar('footer-1')) {
                             dynamic_sidebar('footer-1');

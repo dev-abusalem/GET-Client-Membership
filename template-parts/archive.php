@@ -1,10 +1,5 @@
 <?php
 
-/**
- * The template for displaying archive pages.
- *
- * @package HelloElementor
- */
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.

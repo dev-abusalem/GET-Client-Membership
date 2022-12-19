@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 
                 <form action="<?php echo home_url('/') ?>" method="get">
 
-                    <div class="search" style="display: flex;align-items:center">
+                    <div class="search_box" style="display: flex;align-items:center">
 
                         <input name="s" value="<?php
                                                 echo get_search_query()

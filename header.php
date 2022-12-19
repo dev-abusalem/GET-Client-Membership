@@ -105,18 +105,37 @@
                                 </div>
                             </div>
                             <div class="rd-navbar-search">
-                                <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live" data-search-live-count="6">
+                                <form class="rd-search" action="<?php echo home_url('/') ?>" method="get">
                                     <div class="rd-search-inner">
                                         <div class="form-wrap">
                                             <label class="form-label" for="rd-search-form-input">Search...</label>
-                                            <input class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off">
+                                            <input value="<?php
+                                                            echo get_search_query()
+                                                            ?>" class="form-input" id="rd-search-form-input" type="search" name="s" autocomplete="off">
                                         </div>
                                         <button class="rd-search-submit" type="submit"></button>
                                     </div>
                                     <div class="rd-search-results-live" id="rd-search-results-live"></div>
                                 </form>
+
                                 <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-search-wrap"></button>
                             </div>
+
+
+
+                            <!-- <div class="rd-navbar-search">
+                                <form action="<?php echo home_url('/') ?>" method="get">
+
+                                    <div class="search_box" style="display: flex;align-items:center">
+
+                                        <input name="s" value="<?php
+                                                                echo get_search_query()
+                                                                ?>" type="search" class="form-control" placeholder="Search">
+                                        <button style="background: transparent; border:none; outline:none; color:#009865;cursor:pointer" type="submit"><i style="margin-left:-50px" class="fa fa-search"></i></button>
+                                    </div>
+
+                                </form>
+                            </div> -->
                         </div>
                         <div class="rd-navbar-group">
                             <div class="rd-navbar-panel">

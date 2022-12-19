@@ -103,16 +103,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     cursor: pointer;
 }
 
+.about_menu li a {
+    color: #202020;
+}
 
 /**************************************/
-.search {
+.search_box {
     box-shadow: 0 0 40px rgba(51, 51, 51, .1);
     display: flex;
     align-items: center;
 
 }
 
-.search input {
+.search_box input {
 
     text-indent: 25px;
     border: 2px solid #d6d4d4;
@@ -121,7 +124,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 }
 
 
-.search input:focus {
+.search_box input:focus {
 
     box-shadow: none;
     border: 2px solid #009865;
@@ -129,7 +132,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 }
 
-.search button {
+.search_box button {
     background: transparent;
     border: none;
     outline: none;

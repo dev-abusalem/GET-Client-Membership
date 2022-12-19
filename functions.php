@@ -86,4 +86,8 @@ include get_template_directory() . "./includes/custom-all-post-type.php";
 
 // Links Extranal PHP Files From All Metaboxes
 
-include get_template_directory()  . '/includes/meta-boxes/testimonial-meta.php';
+include get_template_directory()  . './includes/team_meta.php';
+
+// Links Extranal PHP Files From All Metaboxes
+
+include get_template_directory()  . './includes/getclientmem_tgm.php';

@@ -40,7 +40,7 @@
 
             <div class="col-lg-6">
                 <div class="video-wrap">
-                    <figure class="overlay-5"><img class="img-responsive" src="<?php echo get_template_directory_uri() ?>/images/home-04-571x378.jpg" width="571" height="378" alt=""></figure><a class="link-circle link-white" data-lightbox="iframe" href="https://www.youtube.com/watch?v=1UWpbtUupQQ"><span class="icon icon-xl fl-36-slim-icons-play90"></span></a>
+                    <figure class="overlay-5"><img class="img-responsive" src="<?php echo get_theme_mod('home_about_overlay_image_url_update') ?>" width="571" height="378" style="width:571px; height:378px" alt=""></figure><a class="link-circle link-white" data-lightbox="iframe" href="<?php echo get_theme_mod('home_about_video_url_update') ?>"><span class="icon icon-xl fl-36-slim-icons-play90"></span></a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -66,7 +66,7 @@
                                     'after'                => '',
                                     'link_before'          => '',
                                     'link_after'           => '',
-                                    'items_wrap'           => '<ul id="%1$s" class="list-marked-dotted %2$s">%3$s</ul>',
+                                    'items_wrap'           => '<ul id="%1$s" class="list-marked-dotted about_menu %2$s">%3$s</ul>',
                                     'item_spacing'         => 'preserve',
                                     'depth'                => 0,
                                     'walker'               => '',
@@ -224,319 +224,6 @@
 
 
 
-<!-- <section class="section-60 section-md-90 bg-athens-gray bg-image bg-image-md-hide" style="background-image: url('<?php echo get_template_directory_uri() ?>/images/home-bg-image-1.jpg');">
-    <div class="container">
-        <div class="row justify-content-md-end">
-            <div class="col-lg-7 col-xl-7">
-                <div class="tabs-custom tabs-horizontal tabs-line tabs-custom-horizontal" id="tabs-3">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item"><a class="nav-link active" href="#tabs-3-1" data-toggle="tab">LIFE
-                                INSURANCE</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#tabs-3-2" data-toggle="tab">TRAVEL INSURANCE</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#tabs-3-3" data-toggle="tab">HOUSE INSURANCE</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#tabs-3-4" data-toggle="tab">CAR INSURANCE</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content text-black">
-                        <div class="tab-pane fade show active" id="tabs-3-1">
-                            <h2><span class="sub-head-small">Life Insurance Quote</span></h2>
-                            <div class="rd-range-wrap"><span class="rd-range-label">Level of protection:</span>
-                                <div class="rd-range-input-value-3"></div>
-                                <div class="rd-range" data-min="1" data-max="1000" data-start="[150]" data-step="1" data-min-diff="10" data-input=".rd-range-input-value-3"></div>
-                            </div>
-                            <h6 class="text-spacing-0 font-default">Personal information:</h6>
-                            <form class="inset-xl-right-50 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="row justify-content-sm-center justify-content-md-start row-20 row-md-60">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="index-business" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Do you smoke?</option>
-                                                <option value="2">Yes</option>
-                                                <option value="3">No</option>
-                                            </select>
-                                            <label class="form-label form-wrap-outside veil" for="index-business">Do you
-                                                smoke?</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="index-residence" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Your age</option>
-                                                <option value="2">18 - 20</option>
-                                                <option value="3">21 - 25</option>
-                                                <option value="3">26 - 36</option>
-                                                <option value="3">37 - 48</option>
-                                                <option value="3">49 - 55</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row-20">
-                                    <div class="col-md-12">
-                                        <h6 class="text-spacing-0 font-default">Contact details:</h6>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="contact-name" type="text" name="name" data-constraints="@Required">
-                                            <label class="form-label" for="contact-name">Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
-                                            <label class="form-label" for="contact-phone">Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="contact-email" type="text" name="email" data-constraints="@Email @Required">
-                                            <label class="form-label" for="contact-email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-icon btn-icon-right btn-primary-contrast btn-custom btn-block" type="submit"><span>Get a Quote</span><span class="icon icon-xs-smaller fa-angle-right"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="tabs-3-2">
-                            <h2><span class="sub-head-small">Travel Insurance Quote</span></h2>
-                            <div class="rd-range-wrap"><span class="rd-range-label">Level of protection:</span>
-                                <div class="rd-range-input-value-3"></div>
-                                <div class="rd-range" data-min="1" data-max="1000" data-start="[150]" data-step="1" data-min-diff="10" data-input=".rd-range-input-value-3"></div>
-                            </div>
-                            <h6 class="text-spacing-0 font-default">Travel information:</h6>
-                            <form class="inset-xl-right-50 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="row justify-content-sm-center justify-content-md-start row-20 row-md-60">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="travel-distance" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Destination</option>
-                                                <option value="2">10km</option>
-                                                <option value="3">100km</option>
-                                                <option value="3">500km</option>
-                                                <option value="3">1000km</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="travel-time" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Duration</option>
-                                                <option value="2">5 days</option>
-                                                <option value="3">10 days</option>
-                                                <option value="3">15 days</option>
-                                                <option value="3">20 days</option>
-                                                <option value="3">25 days</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row-20">
-                                    <div class="col-md-12">
-                                        <h6 class="text-spacing-0 font-default">Contact details:</h6>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="travel-contact-name" type="text" name="name" data-constraints="@Required">
-                                            <label class="form-label" for="travel-contact-name">Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="travel-contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
-                                            <label class="form-label" for="travel-contact-phone">Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="travel-contact-email" type="text" name="email" data-constraints="@Email @Required ">
-                                            <label class="form-label" for="travel-contact-email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-icon btn-icon-right btn-primary-contrast btn-custom btn-block" type="submit"><span>Get a Quote</span><span class="icon icon-xs-smaller fa-angle-right"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="tabs-3-3">
-                            <h2><span class="sub-head-small">House insurance Quote</span></h2>
-                            <h6 class="text-spacing-0 font-default">Your house:</h6>
-                            <form class="inset-xl-right-50 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="row justify-content-sm-center justify-content-md-start row-20">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="house-property" data-minimum-results-for-search="Infinity">
-                                                <option value="1">What sort of property is it?</option>
-                                                <option value="2">Property</option>
-                                                <option value="3">Rent</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="house-type" data-minimum-results-for-search="Infinity">
-                                                <option value="1">What type of property is it?</option>
-                                                <option value="2">House</option>
-                                                <option value="3">Apartment</option>
-                                                <option value="3">Cottage</option>
-                                                <option value="3">Factory</option>
-                                                <option value="3">Stock</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="house-built" data-minimum-results-for-search="Infinity">
-                                                <option value="1">When was it built?</option>
-                                                <option value="2">1 year</option>
-                                                <option value="3">3 year</option>
-                                                <option value="3">5 year</option>
-                                                <option value="3">10 year</option>
-                                                <option value="3">20 year</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="house-post-code" type="text" name="name" data-constraints="@Required ">
-                                            <label class="form-label" for="house-post-code">House Postcode</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row-20">
-                                    <div class="col-md-12">
-                                        <h6 class="text-spacing-0 font-default">Contact details:</h6>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="house-contact-name" type="text" name="name" data-constraints="@Required">
-                                            <label class="form-label" for="house-contact-name">Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="house-contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
-                                            <label class="form-label" for="house-contact-phone">Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="house-contact-email" type="text" name="email" data-constraints="@Email @Required ">
-                                            <label class="form-label" for="house-contact-email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-icon btn-icon-right btn-primary-contrast btn-custom btn-block" type="submit"><span>Get a Quote</span><span class="icon icon-xs-smaller fa-angle-right"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade" id="tabs-3-4">
-                            <h2><span class="sub-head-small">Car Insurance Quote</span></h2>
-                            <h6 class="text-spacing-0 font-default">Personal information:</h6>
-                            <form class="inset-xl-right-50 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                                <div class="row justify-content-sm-center justify-content-md-start row-20">
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="car-property" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Country</option>
-                                                <option value="2">USA</option>
-                                                <option value="3">Europe</option>
-                                                <option value="3">Asia</option>
-                                                <option value="3">Africa</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="car-type" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Car Manufacturer</option>
-                                                <option value="2">BMW</option>
-                                                <option value="3">Citroen</option>
-                                                <option value="3">Honda</option>
-                                                <option value="3">Ford</option>
-                                                <option value="3">FIAT</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="car-built" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Registration year</option>
-                                                <option value="2">1900+</option>
-                                                <option value="3">2000+</option>
-                                                <option value="3">2010+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-
-                                            <select class="form-input select-filter" id="car-yers" data-minimum-results-for-search="Infinity">
-                                                <option value="1">Your age</option>
-                                                <option value="2">18-22</option>
-                                                <option value="3">23-28</option>
-                                                <option value="3">29-36</option>
-                                                <option value="3">37-48</option>
-                                                <option value="3">49-56</option>
-                                                <option value="3">57+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row row-20">
-                                    <div class="col-md-12">
-                                        <h6 class="text-spacing-0 font-default">Contact details:</h6>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-name" type="text" name="name" data-constraints="@Required">
-                                            <label class="form-label" for="car-contact-name">Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-phone" type="text" name="phone" data-constraints="@Required @Numeric">
-                                            <label class="form-label" for="car-contact-phone">Phone</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-wrap form-wrap-outside">
-                                            <input class="form-input bg-whisper-lighten border-radius-0" id="car-contact-email" type="text" name="email" data-constraints="@Email @Required ">
-                                            <label class="form-label" for="car-contact-email">E-mail</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <button class="btn btn-icon btn-icon-right btn-primary-contrast btn-custom btn-block" type="submit"><span>Get a Quote</span><span class="icon icon-xs-smaller fa-angle-right"></span></button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
-
-
-
 
 <section class="section-50 section-md-90 section-md-bottom-100">
     <div class="container text-center">
@@ -565,7 +252,7 @@
                                     <?php the_title() ?>
                                 </a></div>
                             <ul class="list-inline list-inline-dashed text-uppercase font-accent">
-                                <li><?php the_date() ?></li>
+                                <li><?php echo get_the_date() ?></li>
                                 <li><span>by <a class="text-primary" href="#">ADMIN</a></span></li>
                             </ul>
                         </div>
@@ -589,7 +276,7 @@
         </div>
     </div>
 </section>
-<section class="section-30 bg-whisper-1">
+<!-- <section class="section-30 bg-whisper-1">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-lg-3">
@@ -606,5 +293,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <?php get_footer(); ?>

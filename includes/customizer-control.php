@@ -118,8 +118,49 @@ function getclientmem_home_about_section_customize($wp_customize)
     $wp_customize->add_section('getclientmem_home_about_sec', array(
         'title'      => __('Home About Section', 'getclientmem'),
         'priority'   => 60,
+        'description'   => 'Please always use https or http for URL field',
     ));
 
+
+    // Add About Overlay Image URL
+
+    $wp_customize->add_setting('home_about_overlay_image_url_update', array(
+        'default'   => 'https://wallpapercave.com/wp/wp6369875.jpg',
+        'transport' => 'refresh',
+
+    ));
+
+    $wp_customize->add_control('home_about_overlay_image_url_update', array(
+        'label'      => __('Overlay Image URL', 'getclientmem'),
+
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'url',
+    ));
+    // Add About Video URL
+
+    $wp_customize->add_setting('home_about_video_url_update', array(
+        'default'   => 'https://youtu.be/668nUCeBHyY',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('home_about_video_url_update', array(
+        'label'      => __('Video URL', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'url',
+    ));
+
+    // Add About Video URL
+
+    $wp_customize->add_setting('home_about_video_url_update', array(
+        'default'   => 'https://youtu.be/668nUCeBHyY',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('home_about_video_url_update', array(
+        'label'      => __('Video URL', 'getclientmem'),
+        'section'    => 'getclientmem_home_about_sec',
+        'type'       => 'url',
+    ));
     // Add Title Texts
 
     $wp_customize->add_setting('home_about_title_section_update', array(
